@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.oracle.bmc.test</groupId>
+    <artifactId>terraform</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>JUnit5</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
+        <junit.platform.version>1.0.0-M4</junit.platform.version>
+        <guava.version>19.0</guava.version>
+        <jackson.version>2.7.4</jackson.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Oracle</name>
+            <url>http://artifactory.oraclecorp.com/artifactory/repo</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Oracle</name>
+            <url>http://artifactory.oraclecorp.com/artifactory/repo</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>${junit.platform.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.53</version>
+        </dependency>
+
+        <!-- Build only dependencies -->
+        <!-- <dependency>
+             <groupId>org.projectlombok</groupId>
+             <artifactId>lombok</artifactId>
+             <scope>provided</scope>
+         </dependency>-->
+
+
+        <dependency>
+            <groupId>com.oracle.bmc.sdk</groupId>
+            <artifactId>oracle-bmc-java-sdk-full</artifactId>
+            <version>1.2.8-SNAPSHOT</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>com.oracle.bmc.sdk</groupId>
+            <artifactId>oracle-bmc-java-sdk-audit</artifactId>
+            <version>1.2.8-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.bmc.sdk</groupId>
+            <artifactId>oracle-bmc-java-sdk-core</artifactId>
+            <version>1.2.8-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.bmc.sdk</groupId>
+            <artifactId>oracle-bmc-java-sdk-identity</artifactId>
+            <version>1.2.8-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.bmc.sdk</groupId>
+            <artifactId>oracle-bmc-java-sdk-objectstorage</artifactId>
+            <version>1.2.8-SNAPSHOT</version>
+        </dependency>-->
+
+
+    </dependencies>
+</project>
